@@ -1,0 +1,11 @@
+{
+    "name": "root/course-project-on-php",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "require": {
+        "fakerphp/faker": "^1.19"
+    }
+}
