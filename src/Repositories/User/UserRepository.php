@@ -1,10 +1,12 @@
 <?php
 
-namespace App\Repositories;
+namespace App\Repositories\User;
 
 use App\Entities\EntityInterface;
 use App\Entities\User\User;
 use App\Exceptions\UserNotFoundException;
+use App\Repositories\EntityRepository;
+
 use PDO;
 use PDOStatement;
 
