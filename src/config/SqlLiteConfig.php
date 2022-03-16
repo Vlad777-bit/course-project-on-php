@@ -4,5 +4,5 @@ namespace App\config;
 
 class SqlLiteConfig
 {
-    public const DSN = 'sqlite:' . __DIR__ . '/../../'.'/geekbrains.sqlite';
+    public const DSN = 'sqlite:' . __DIR__ . '/../../'.'dump/gb.sqlite';
 }
