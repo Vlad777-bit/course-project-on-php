@@ -20,14 +20,11 @@ class Migration_version_1 implements MigrationsInterface
         $this->connector->getConnection()->query(
             "create table users
                         (
-                            id integer
-                            constraint users_pk primary key autoincrement,
-                            first_name varchar,
-                            last_name  varchar,
-                            email      varchar
-                        );            
-                        create unique index users_email_uindex on users (email);
-                     "
+                            id         integer primary key autoincrement,
+                            first_name varchar not null,
+                            last_name  varchar not null,
+                            email      varchar not null unique 
+                        );"
         );
     }
 }
