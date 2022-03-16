@@ -6,7 +6,7 @@ use App\Connections\ConnectorInterface;
 use App\Connections\SqlLiteConnector;
 use JetBrains\PhpStorm\Pure;
 
-class Migration_version_1 implements Migrations
+class Migration_version_1 implements MigrationsInterface
 {
     private ConnectorInterface $connector;
 

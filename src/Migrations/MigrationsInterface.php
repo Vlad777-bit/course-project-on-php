@@ -2,7 +2,7 @@
 
 namespace App\Migrations;
 
-interface Migrations
+interface MigrationsInterface
 {
     public function execute(): void;
 }
