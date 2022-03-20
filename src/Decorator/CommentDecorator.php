@@ -16,8 +16,8 @@ class CommentDecorator extends Decorator implements DecoratorInterface
     public const TEXT = 'text';
 
     public ?int $id = null;
-    public ?User $author;
-    public ?Article $article;
+    public ?int $author;
+    public ?int $article;
     public string $text;
 
     public const REQUIRED_FIELDS = [

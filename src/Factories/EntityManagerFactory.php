@@ -34,7 +34,7 @@ class EntityManagerFactory extends Factory implements EntityManagerFactoryInterf
 
     public function getRepository(EntityInterface $entity): EntityRepositoryInterface
     {
-        return $this->repositoryFactory->create($entity);
+        return $this->repositoryFactory->create($entity::class);
     }
 
     /**

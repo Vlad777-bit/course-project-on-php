@@ -14,7 +14,7 @@ final class ArticleFactory implements ArticleFactoryInterface
     {
         return new Article(
             $articleDecorator->id,
-            $articleDecorator->author,
+            $articleDecorator->authorId,
             $articleDecorator->title,
             $articleDecorator->text,
         );

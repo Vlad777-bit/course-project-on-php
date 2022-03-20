@@ -25,7 +25,7 @@ class ArgumentParserService implements ArgumentParserServiceInterface
             $arguments = explode('=', $argument);
 
             if (count($arguments) !== 2) {
-                throw new ArgumentException();
+                throw new ArgumentException('Парамметры должны быть в формате fieldName = value');
             }
 
             if (!empty($arguments[0]) && !empty($arguments[1])) {

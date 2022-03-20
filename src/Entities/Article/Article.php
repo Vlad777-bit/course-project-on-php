@@ -7,20 +7,20 @@ use App\Entities\User\User;
 class Article implements ArticleInterface
 {
     public function __construct(
-        private int    $id,
-        private User   $author,
+        private ?int   $id,
+        private ?int  $authorId,
         private string $title,
         private string $text,
     ) {}
 
-    public function getId(): int
+    public function getId(): ?int
     {
         return $this->id;
     }
 
-    public function getAuthor(): User
+    public function getAuthorId(): ?int
     {
-        return $this->author;
+        return $this->authorId;
     }
 
     public function getTitle(): string
@@ -38,7 +38,7 @@ class Article implements ArticleInterface
         return sprintf(
             "[%d] %s %s %s",
             $this->getId(),
-            $this->getAuthor(),
+            $this->getAuthorId(),
             $this->getTitle(),
             $this->getText(),
         );

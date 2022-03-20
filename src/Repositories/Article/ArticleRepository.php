@@ -29,7 +29,7 @@ class ArticleRepository extends EntityRepository implements ArticleRepositoryInt
 
         $statement->execute(
             [
-                ':author_id' => $entity->getAuthor(),
+                ':author_id' => $entity->getAuthorId(),
                 ':title'     => $entity->getTitle(),
                 ':text'      => $entity->getText(),
             ]

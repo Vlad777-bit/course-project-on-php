@@ -2,7 +2,10 @@
 
 namespace App\Decorator;
 
+use App\Commands\CreateCommand;
 use App\Entities\User\User;
+use App\Factories\EntityManagerFactory;
+use App\Repositories\User\UserRepository;
 use App\Exceptions\ArgumentException;
 use App\Exceptions\CommandException;
 use App\Services\ArgumentParserServiceInterface;
@@ -15,7 +18,7 @@ class ArticleDecorator extends Decorator implements DecoratorInterface
     public const TEXT = 'text';
 
     public ?int $id = null;
-    public ?User $authorId;
+    public ?int $authorId;
     public string $title;
     public string $text;
 
@@ -26,7 +29,6 @@ class ArticleDecorator extends Decorator implements DecoratorInterface
     ];
 
     private ?ArgumentParserServiceInterface $argumentParserService;
-    public ?User $author;
 
     /**
      * @throws ArgumentException
